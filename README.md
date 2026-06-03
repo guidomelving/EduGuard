@@ -1,173 +1,271 @@
 # 🎓 EduGuard: Student Dropout Early Warning System
 
-## 📖 Deskripsi Proyek
-
-**EduGuard** merupakan sistem peringatan dini (*Early Warning System*) berbasis Machine Learning yang dirancang untuk membantu institusi pendidikan tinggi dalam mengidentifikasi mahasiswa yang berpotensi mengalami putus kuliah (*dropout*).
-
-Melalui analisis data akademik dan administratif mahasiswa, sistem ini mampu memberikan prediksi risiko dropout secara cepat dan akurat sehingga pihak kampus dapat melakukan intervensi lebih awal untuk meningkatkan tingkat keberhasilan studi mahasiswa.
-
-Proyek ini dikembangkan sebagai bagian dari **Final Project Machine Learning** pada program **Google Developer Groups on Campus (GDGoC) Telkom University 2026**.
+> Leveraging Machine Learning to Support SDG 4: Quality Education Through Early Student Dropout Risk Detection
 
 ---
 
-# 🌍 Penyelarasan Sustainable Development Goals (SDGs)
+# 📖 Tentang Proyek
 
-## SDG 4: Pendidikan Berkualitas (Quality Education)
+**EduGuard** merupakan sistem peringatan dini (*Early Warning System*) berbasis Machine Learning yang dirancang untuk membantu institusi pendidikan dalam mengidentifikasi mahasiswa yang berpotensi mengalami putus kuliah (*dropout*) sejak tahap awal masa studi.
 
-<p align="justify">
-Pendidikan merupakan salah satu faktor utama dalam pembangunan sumber daya manusia yang berkualitas. Namun, tingginya angka mahasiswa yang tidak menyelesaikan pendidikan menjadi tantangan bagi berbagai institusi pendidikan tinggi.
+Dengan memanfaatkan data akademik, administratif, dan demografis mahasiswa, sistem ini mampu menghasilkan prediksi risiko dropout beserta tingkat probabilitasnya sehingga pihak kampus dapat melakukan intervensi lebih cepat dan lebih tepat sasaran.
 
-Melalui EduGuard, kami berupaya mendukung pencapaian <strong>Sustainable Development Goal (SDG) 4: Quality Education</strong> dengan memanfaatkan teknologi Machine Learning untuk mendeteksi risiko putus kuliah sejak dini. Dengan adanya sistem ini, institusi pendidikan dapat mengambil langkah preventif dan memberikan dukungan yang lebih tepat sasaran kepada mahasiswa yang membutuhkan.
-</p>
+Proyek ini dikembangkan sebagai **Final Project Machine Learning** dalam program **Google Developer Groups on Campus (GDGoC) Telkom University 2026**.
+
+---
+
+# 🌍 Sustainable Development Goals (SDGs)
+
+## SDG 4: Quality Education
+
+Pendidikan berkualitas merupakan salah satu fondasi utama pembangunan berkelanjutan. Namun, tingginya angka mahasiswa yang gagal menyelesaikan pendidikan masih menjadi tantangan bagi berbagai institusi pendidikan tinggi di seluruh dunia.
+
+Melalui EduGuard, kami berupaya mendukung implementasi **SDG 4: Quality Education** dengan memanfaatkan teknologi Artificial Intelligence dan Machine Learning untuk membantu proses identifikasi risiko dropout mahasiswa secara lebih cepat, objektif, dan berbasis data.
+
+Dengan adanya sistem ini, institusi pendidikan dapat mengambil tindakan preventif lebih awal, meningkatkan retensi mahasiswa, serta memberikan dukungan akademik yang lebih efektif kepada mahasiswa yang membutuhkan.
 
 ---
 
 # 🎯 Tujuan Proyek
 
-Proyek ini bertujuan untuk:
-
-- Mengidentifikasi mahasiswa yang berisiko mengalami putus kuliah.
+- Mengidentifikasi mahasiswa yang berisiko mengalami dropout.
 - Membantu dosen wali dan pihak akademik dalam proses monitoring mahasiswa.
-- Menyediakan sistem pendukung keputusan berbasis data.
-- Meningkatkan tingkat retensi mahasiswa.
-- Mendukung implementasi SDG 4: Pendidikan Berkualitas.
+- Mendukung pengambilan keputusan berbasis data.
+- Meningkatkan tingkat keberhasilan studi mahasiswa.
+- Mendukung implementasi SDG 4 melalui teknologi Artificial Intelligence.
 
 ---
 
-# 🚀 Fitur Utama
+# 👥 Tim Pengembang
 
-### 📊 Prediksi Risiko Dropout
+## Tim Deny Pengen Pulang Kampung
 
-Memprediksi kemungkinan mahasiswa akan:
-
-- Lulus (Graduate)
-- Putus Kuliah (Dropout)
-
-### ⚡ Analisis Real-Time
-
-Prediksi dilakukan secara langsung melalui dashboard interaktif menggunakan Streamlit.
-
-### 📈 Visualisasi Probabilitas
-
-Menampilkan probabilitas hasil prediksi dalam bentuk grafik sehingga lebih mudah dipahami.
-
-### 📝 Rekomendasi Intervensi
-
-Memberikan rekomendasi tindakan berdasarkan hasil prediksi yang diperoleh.
-
-### 🎓 Fokus pada Pendidikan
-
-Dirancang khusus untuk mendukung kebutuhan institusi pendidikan tinggi dalam melakukan monitoring akademik mahasiswa.
+| Nama |
+|--------|
+| Guidomelvin |
+| Deny Pratama Sukardi |
+| Berto Jdoyvan Purba |
+| Almer Fakhir Arwonio |
 
 ---
 
-# 🧠 Metodologi Machine Learning
+# 📚 Dataset
 
-## 1. Pengumpulan Data
+### Students Dropout and Academic Success Dataset
 
-Dataset yang digunakan berisi informasi mahasiswa yang mencakup:
+Dataset yang digunakan berasal dari Kaggle:
 
-- Data demografi
-- Data akademik
+https://www.kaggle.com/datasets/missionjee/students-dropout-and-academic-success-dataset
+
+Dataset ini berisi berbagai informasi akademik, administratif, dan demografis mahasiswa yang digunakan untuk memprediksi kemungkinan mahasiswa berhasil lulus ataupun mengalami dropout.
+
+Informasi yang tersedia dalam dataset meliputi:
+
+- Data demografi mahasiswa
 - Status administrasi
+- Riwayat akademik
 - Performa semester awal
+- Status akhir mahasiswa
 
 ---
 
-## 2. Data Preprocessing
+# 🔍 Data Preprocessing
 
-Tahapan yang dilakukan meliputi:
+Tahapan preprocessing yang dilakukan meliputi:
 
-- Pembersihan data (*data cleaning*)
-- Penanganan data kosong (*missing values*)
-- Transformasi data
-- Standarisasi fitur numerik
+### 1. Data Loading & Exploration
 
----
+- Memuat dataset menggunakan Pandas
+- Pemeriksaan struktur data
+- Analisis distribusi data
+- Identifikasi fitur dan target
 
-## 3. Feature Engineering
+### 2. Data Cleaning
 
-Beberapa fitur tambahan dibuat untuk meningkatkan performa model:
+- Pemeriksaan missing values
+- Pemeriksaan data duplikat
+- Validasi konsistensi data
 
-### Total_Approved_Units
+### 3. Feature Engineering
 
-Jumlah total mata kuliah yang berhasil diselesaikan mahasiswa.
+Fitur tambahan yang dibuat untuk meningkatkan performa model:
 
-```text
-Total_Approved_Units =
-Approved Semester 1 + Approved Semester 2
-```
+#### Total_Approved_Units
 
-### Grade_Incentive
+Jumlah total mata kuliah yang berhasil diselesaikan mahasiswa pada semester pertama dan semester kedua.
 
-Perubahan performa akademik antara semester 1 dan semester 2.
+#### Grade_Incentive
 
-```text
-Grade_Incentive =
-Grade Semester 2 - Grade Semester 1
-```
+Perubahan performa akademik mahasiswa dari semester pertama ke semester kedua.
 
----
+### 4. Feature Selection
 
-## 4. Pelatihan Model
+Pemilihan fitur yang paling relevan terhadap target prediksi.
 
-Model Machine Learning dilatih menggunakan dataset yang telah diproses dan kemudian diekspor menjadi:
+### 5. Feature Scaling
 
-```text
-model_dropout.pkl
-```
+Standarisasi fitur numerik menggunakan StandardScaler untuk menjaga konsistensi data selama proses pelatihan dan prediksi.
 
-Selain itu digunakan juga:
+### 6. Train-Test Split
 
-```text
-scaler_dropout.pkl
-selected_features.pkl
-```
-
-untuk memastikan konsistensi proses prediksi pada aplikasi deployment.
+Dataset dibagi menjadi data training dan data testing untuk memastikan proses evaluasi model dilakukan secara objektif.
 
 ---
 
-# 📥 Parameter Input
+# 📊 Exploratory Data Analysis (EDA)
 
-EduGuard menerima beberapa parameter utama sebagai masukan:
+Sebelum proses pelatihan model dilakukan, Exploratory Data Analysis (EDA) digunakan untuk memahami karakteristik dataset, distribusi target, serta hubungan antar fitur yang berpotensi memengaruhi risiko dropout mahasiswa.
 
-| Parameter | Keterangan |
-|------------|------------|
-| Mata Kuliah Lulus Semester 1 | Jumlah mata kuliah yang berhasil diselesaikan |
-| IP Semester 1 | Indeks Prestasi Semester pertama |
-| Mata Kuliah Lulus Semester 2 | Jumlah mata kuliah yang berhasil diselesaikan |
-| IP Semester 2 | Indeks Prestasi Semester kedua |
-| Status Pembayaran UKT | Status administrasi mahasiswa |
-| Usia Saat Mendaftar | Usia mahasiswa ketika masuk perguruan tinggi |
+## Distribusi Status Mahasiswa
 
----
+Visualisasi berikut menunjukkan distribusi mahasiswa berdasarkan status akhirnya pada dataset.
 
-# 📤 Hasil Prediksi
+- **Graduate (0)** → Mahasiswa yang berhasil menyelesaikan studi.
+- **Dropout (1)** → Mahasiswa yang tidak menyelesaikan studi.
 
-Sistem akan menghasilkan:
+<p align="center">
+  <img src="images/target-distribution.png" width="700">
+</p>
 
-### Status Mahasiswa
-
-- Aman (Berpotensi Lulus)
-- Berisiko Tinggi (Berpotensi Dropout)
-
-### Probabilitas Prediksi
-
-Contoh:
-
-```text
-Probabilitas Lulus     : 87.45%
-Probabilitas Dropout  : 12.55%
-```
-
-### Rekomendasi Akademik
-
-Sistem akan memberikan saran tindak lanjut berdasarkan hasil prediksi.
+Hasil analisis menunjukkan bahwa jumlah mahasiswa yang berhasil lulus lebih banyak dibandingkan mahasiswa yang mengalami dropout. Distribusi ini tetap cukup representatif untuk membangun model klasifikasi yang mampu membedakan kedua kelompok mahasiswa.
 
 ---
 
-# 🖥️ Struktur Proyek
+## Hubungan Kelulusan Mata Kuliah dengan Status Mahasiswa
+
+Visualisasi berikut menunjukkan hubungan antara jumlah mata kuliah yang berhasil diselesaikan mahasiswa pada dua semester awal dengan status akhir studinya.
+
+<p align="center">
+  <img src="images/approved-units-analysis.png" width="700">
+</p>
+
+Terlihat bahwa mahasiswa yang berhasil lulus cenderung memiliki jumlah mata kuliah lulus yang lebih tinggi dibandingkan mahasiswa yang mengalami dropout. Temuan ini mengindikasikan bahwa performa akademik pada semester awal merupakan salah satu indikator penting dalam menentukan keberhasilan studi mahasiswa.
+
+---
+
+# 🤖 Model Machine Learning
+
+Model utama yang digunakan pada proyek ini adalah:
+
+## Random Forest Classifier
+
+Alasan pemilihan model:
+
+- Memiliki performa yang baik pada data tabular.
+- Mampu menangani hubungan non-linear antar fitur.
+- Tidak terlalu sensitif terhadap outlier.
+- Stabil terhadap variasi data.
+- Dapat memberikan informasi Feature Importance untuk interpretasi model.
+
+Model yang telah dilatih kemudian disimpan menggunakan Joblib dan digunakan kembali pada aplikasi Streamlit.
+
+---
+
+# 📊 Evaluasi Model
+
+Setelah proses pelatihan selesai, model dievaluasi menggunakan data pengujian untuk mengukur kemampuannya dalam memprediksi risiko dropout mahasiswa.
+
+## Hasil Evaluasi Model
+
+Visualisasi berikut menunjukkan hasil evaluasi model menggunakan metrik klasifikasi seperti Accuracy, Precision, Recall, dan F1-Score.
+
+<p align="center">
+  <img src="images/model-evaluation.png" width="750">
+</p>
+
+Model menunjukkan performa yang sangat baik dalam membedakan mahasiswa yang berpotensi lulus dan mahasiswa yang berpotensi mengalami dropout.
+
+---
+
+## Confusion Matrix
+
+Confusion Matrix digunakan untuk mengevaluasi kemampuan model dalam melakukan klasifikasi terhadap data pengujian.
+
+<p align="center">
+  <img src="images/confusion-matrix.png" width="600">
+</p>
+
+Berdasarkan hasil pengujian:
+
+- 422 mahasiswa Graduate berhasil diprediksi dengan benar.
+- 248 mahasiswa Dropout berhasil diprediksi dengan benar.
+- 20 mahasiswa Graduate salah diprediksi sebagai Dropout.
+- 36 mahasiswa Dropout salah diprediksi sebagai Graduate.
+
+Hasil tersebut menunjukkan bahwa model memiliki kemampuan klasifikasi yang baik dengan tingkat kesalahan yang relatif rendah.
+
+---
+
+## Feature Importance
+
+Untuk meningkatkan interpretabilitas model, dilakukan analisis Feature Importance guna mengetahui faktor-faktor yang paling berpengaruh terhadap prediksi risiko dropout mahasiswa.
+
+<p align="center">
+  <img src="images/feature-importance.png" width="750">
+</p>
+
+### Insight Utama
+
+Berdasarkan hasil Feature Importance, faktor yang paling memengaruhi prediksi risiko dropout mahasiswa adalah:
+
+1. Total_Approved_Units
+2. Curricular Units 2nd Semester (Approved)
+3. Curricular Units 1st Semester (Approved)
+4. Curricular Units 2nd Semester (Grade)
+5. Curricular Units 1st Semester (Grade)
+6. Tuition Fees Up To Date
+7. Grade Incentive
+
+Temuan ini menunjukkan bahwa performa akademik mahasiswa pada dua semester pertama merupakan indikator paling penting dalam menentukan keberlanjutan studi mahasiswa.
+
+---
+
+# 🖥️ Aplikasi Streamlit
+
+EduGuard dikembangkan menggunakan Streamlit untuk menyediakan antarmuka yang sederhana, intuitif, dan mudah digunakan.
+
+Fitur utama aplikasi:
+
+- Input data mahasiswa secara interaktif.
+- Prediksi risiko dropout secara real-time.
+- Perhitungan probabilitas hasil prediksi.
+- Visualisasi probabilitas Graduate dan Dropout.
+- Rekomendasi tindak lanjut akademik.
+- Dashboard yang mudah digunakan oleh pengguna non-teknis.
+
+---
+
+## Dashboard Utama
+
+Dashboard utama menyediakan formulir evaluasi mahasiswa yang memungkinkan pengguna memasukkan informasi akademik dan administratif untuk dilakukan analisis risiko dropout secara real-time.
+
+<p align="center">
+  <img src="images/dashboard.png" width="850">
+</p>
+
+---
+
+## Prediksi Mahasiswa Aman
+
+Contoh hasil prediksi ketika mahasiswa memiliki performa akademik yang baik dan berpotensi menyelesaikan studi dengan sukses.
+
+<p align="center">
+  <img src="images/prediction-safe.png" width="850">
+</p>
+
+---
+
+## Prediksi Mahasiswa Berisiko Dropout
+
+Contoh hasil prediksi ketika mahasiswa menunjukkan indikator yang mengarah pada risiko dropout sehingga memerlukan perhatian dan pendampingan akademik lebih lanjut.
+
+<p align="center">
+  <img src="images/prediction-dropout.png" width="850">
+</p>
+
+---
+
+# 📂 Struktur Repository
 
 ```text
 EduGuard/
@@ -179,50 +277,71 @@ EduGuard/
 ├── scaler_dropout.pkl
 ├── selected_features.pkl
 ├── README.md
-└── requirements.txt
+└── images/
+    ├── dashboard.png
+    ├── prediction-safe.png
+    ├── prediction-dropout.png
+    ├── target-distribution.png
+    ├── approved-units-analysis.png
+    ├── model-evaluation.png
+    ├── confusion-matrix.png
+    └── feature-importance.png
 ```
-
-Keterangan:
-
-| File | Fungsi |
-|--------|---------|
-| EduGuard.ipynb | Notebook untuk eksplorasi data, preprocessing, dan pelatihan model |
-| app.py | Aplikasi Streamlit untuk deployment |
-| data.csv | Dataset yang digunakan |
-| model_dropout.pkl | Model Machine Learning yang telah dilatih |
-| scaler_dropout.pkl | Objek standarisasi fitur |
-| selected_features.pkl | Daftar fitur yang digunakan model |
 
 ---
 
-# 🛠️ Teknologi yang Digunakan
+# 🛠️ Tech Stack
 
-### Bahasa Pemrograman
+### Programming Language
 
 - Python
 
-### Library Data Science
+### Machine Learning
+
+- Scikit-Learn
+
+### Data Processing
 
 - Pandas
 - NumPy
-- Scikit-Learn
 
-### Visualisasi Data
+### Data Visualization
 
 - Matplotlib
 - Seaborn
 
-### Deployment
+### Web Deployment
 
 - Streamlit
 
-### Model Serialization
+### Model Persistence
 
 - Joblib
 
 ---
 
-# ▶️ Cara Menjalankan Proyek
+# 🤖 Deklarasi Penggunaan AI
+
+Pengembangan proyek ini memanfaatkan bantuan Artificial Intelligence (AI) sebagai alat pendukung pembelajaran dan pengembangan perangkat lunak.
+
+Tools yang digunakan:
+
+- Google Gemini
+- ChatGPT
+
+AI digunakan untuk membantu proses:
+
+- Brainstorming ide dan solusi.
+- Pengembangan kode Python.
+- Debugging dan optimasi kode.
+- Pengembangan antarmuka Streamlit.
+- Dokumentasi dan penyusunan README.
+
+Seluruh anggota tim tetap memahami, memverifikasi, dan bertanggung jawab atas seluruh implementasi yang digunakan dalam proyek ini sesuai dengan ketentuan Final Project Machine Learning GDGoC Telkom University 2026.
+
+---
+
+# 🚀 Cara Menjalankan Proyek
 
 ## 1. Clone Repository
 
@@ -231,10 +350,10 @@ git clone https://github.com/username/EduGuard.git
 cd EduGuard
 ```
 
-## 2. Install Dependency
+## 2. Install Library yang Dibutuhkan
 
 ```bash
-pip install -r requirements.txt
+pip install streamlit pandas numpy scikit-learn matplotlib seaborn joblib
 ```
 
 ## 3. Jalankan Aplikasi
@@ -243,7 +362,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## 4. Buka Browser
+## 4. Akses Melalui Browser
 
 ```text
 http://localhost:8501
@@ -251,40 +370,28 @@ http://localhost:8501
 
 ---
 
-# 👨‍💻 Profil Kelompok
+# 🌟 Dampak yang Diharapkan
 
-## Nama Kelompok
+Melalui EduGuard, kami berharap institusi pendidikan dapat:
 
-**Tim Deny Pengen Pulang Kampung**
-
-### Anggota Tim
-
-- Guidomelvin
-- Deny Pratama Sukardi
-- Berto Jdoyvan Purba
-- Almer Fakhir Arwonio
+- Mengurangi angka dropout mahasiswa.
+- Meningkatkan tingkat retensi mahasiswa.
+- Mendukung pengambilan keputusan berbasis data.
+- Memberikan intervensi akademik yang lebih efektif.
+- Berkontribusi terhadap pencapaian SDG 4: Quality Education.
 
 ---
 
 # 🎓 Program
 
-Proyek ini dikembangkan dalam rangka memenuhi Tugas Besar Machine Learning pada program:
+Final Project Machine Learning
 
-**Google Developer Groups on Campus (GDGoC) Telkom University Bandung 2026**
+Google Developer Groups on Campus (GDGoC)
 
----
-
-# 💡 Kontribusi Proyek
-
-EduGuard diharapkan dapat menjadi solusi awal bagi institusi pendidikan untuk:
-
-- Mengurangi angka putus kuliah.
-- Meningkatkan keberhasilan studi mahasiswa.
-- Mendukung pengambilan keputusan berbasis data.
-- Mewujudkan pendidikan yang lebih inklusif dan berkualitas.
+Telkom University 2026
 
 ---
 
 # 📜 Lisensi
 
-Proyek ini dibuat untuk tujuan pendidikan, pembelajaran, dan pengembangan akademik dalam lingkup Tugas Besar Machine Learning GDGoC Universitas Telkom.
+Proyek ini dikembangkan untuk tujuan pendidikan, pembelajaran, dan pengembangan kompetensi Machine Learning dalam program Google Developer Groups on Campus (GDGoC) Telkom University 2026.
