@@ -53,7 +53,7 @@ Dengan adanya sistem ini, institusi pendidikan dapat mengambil tindakan preventi
 
 ### Students Dropout and Academic Success Dataset
 
-Dataset yang digunakan berasal dari Kaggle:
+Dataset yang digunakan berasal dari UCI Machine Learning Repository:
 
 https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
 
