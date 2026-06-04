@@ -55,7 +55,7 @@ Dengan adanya sistem ini, institusi pendidikan dapat mengambil tindakan preventi
 
 Dataset yang digunakan berasal dari Kaggle:
 
-https://www.kaggle.com/datasets/missionjee/students-dropout-and-academic-success-dataset
+https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
 
 Dataset ini berisi berbagai informasi akademik, administratif, dan demografis mahasiswa yang digunakan untuk memprediksi kemungkinan mahasiswa berhasil lulus ataupun mengalami dropout.
 
