@@ -145,17 +145,30 @@ Terlihat bahwa mahasiswa yang berhasil lulus cenderung memiliki jumlah mata kuli
 
 # 🤖 Model Machine Learning
 
-Model utama yang digunakan pada proyek ini adalah:
+## Perbandingan Model
 
-## Random Forest Classifier
+Untuk memilih model terbaik, dilakukan perbandingan performa tiga algoritma klasifikasi:
 
-Alasan pemilihan model:
+| Model | Keterangan |
+|-------|------------|
+| Logistic Regression | Model linier yang sederhana dan interpretatif |
+| Decision Tree | Model non-linier berbasis aturan keputusan |
+| Random Forest | Model ensemble berbasis banyak pohon keputusan |
 
-- Memiliki performa yang baik pada data tabular.
+Ketiga model dilatih menggunakan data training yang sama dan dievaluasi dengan metrik yang sama (Accuracy, Precision, Recall, F1-Score, ROC-AUC).
+
+## Model Terpilih: Random Forest Classifier
+
+Berdasarkan hasil perbandingan, Random Forest dipilih sebagai model utama karena:
+
+- F1-Score dan ROC-AUC tertinggi di antara ketiga model.
+- Robust terhadap overfitting (dibandingkan Decision Tree tunggal).
 - Mampu menangani hubungan non-linear antar fitur.
-- Tidak terlalu sensitif terhadap outlier.
-- Stabil terhadap variasi data.
 - Dapat memberikan informasi Feature Importance untuk interpretasi model.
+
+## Hyperparameter Tuning
+
+Setelah terpilih, Random Forest dioptimalkan menggunakan GridSearchCV dengan 5-fold cross-validation. Performa sebelum dan sesudah tuning dibandingkan untuk memastikan peningkatan.
 
 Model yang telah dilatih kemudian disimpan menggunakan Joblib dan digunakan kembali pada aplikasi Streamlit.
 
@@ -346,7 +359,7 @@ Seluruh anggota tim tetap memahami, memverifikasi, dan bertanggung jawab atas se
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/EduGuard.git
+git clone <URL_REPOSITORY_ANDA>
 cd EduGuard
 ```
 
@@ -389,6 +402,16 @@ Final Project Machine Learning
 Google Developer Groups on Campus (GDGoC)
 
 Telkom University 2026
+
+---
+
+# 📚 Referensi
+
+- Dataset: [Predict students' dropout and academic success - UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
+- Realinho, V., Machado, J., Baptista, L., & Martins, M. V. (2022). Predicting Student Dropout and Academic Success. *Data*, 7(11), 146. https://doi.org/10.3390/data7110146
+- [Sustainable Development Goal 4: Quality Education - United Nations](https://sdgs.un.org/goals/goal4)
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
 
 ---
 
